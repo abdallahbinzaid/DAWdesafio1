@@ -1,0 +1,322 @@
+body {
+    font-family: 'Mojito In June', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #333;
+}
+.navbar {
+    background-color: #ec0404;
+    color: white;
+    padding: 10px 0;
+}
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+header {
+    background-image: url('../img/sombrero.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Aumentado para más impacto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar el overlay */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro para resaltar el texto */
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 5em; /* Aumentado para más impacto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative; /* Para que esté sobre el overlay */
+    z-index: 1;
+}
+
+.platillos-mes {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #E60026;
+    color: #FFFFFF;
+}
+
+.platillos-mes h2 {
+    font-size: 2.5em;
+    max-width: 600px; /* Limita el ancho del título */
+    margin: 0 auto; /* Centra el título */
+    padding: 0.5em 0; /* Añade algo de espacio arriba y abajo */
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: #FFFFFF;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra la sección */
+}
+
+.menu-item {
+    width: 30%;
+    text-align: center;
+    background-color: #008C45;
+    padding: 1em;
+    border-radius: 10px;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Añade una sombra sutil */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.menu-imagen {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #f8f8f8; /* Añade un fondo sutil */
+}
+
+.menu-imagen img {
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Añade una sombra sutil */
+}
+
+footer {
+    background-color: #E60026;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+/* Para tablets */
+@media screen and (max-width: 768px) {
+    header {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 2em;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+}
+
+/* Para celular */
+@media screen and (max-width: 480px) {
+    header {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+
+    .menu-imagen img {
+        max-width: 95%;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 1.2em;
+    }
+
+    .menu-item {
+        width: 95%;
+    }
+}
+
+/* Estilos para el footer */
+.footer {
+    background: linear-gradient(#C8102E, #C8102E); /* Degradado de verde a blanco a rojo */
+    color: white;
+    padding: 1rem 0; /* Ajustado para que no sea tan alto */
+    border-top: 1px solid #C8102E;
+    font-family: 'Mojito in June', cursive; 
+    font-size: 1.2rem;/* Aplica la fuente */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 1rem;
+}
+
+.footer-content div {
+    flex: 1; /* Each column takes equal space */
+    min-width: 200px; /* Minimum width for each column */
+    margin: 0.5rem; /* Space between columns */
+    padding: 0rem;
+    position: relative;
+}
+
+.footer-content div:not(:last-child)::after {
+    content: ''; /* Crear un pseudo-elemento */
+    position: absolute; /* Posicionarlo absolutamente */
+    top: 0; /* Alinearlo en la parte superior */
+    right: 0; /* Alinearlo a la derecha */
+    width: 4px; /* Ancho de la línea */
+    height: 100%; /* Altura completa de la columna */
+    background-color: rgba(255, 255, 255, 0.3); /* Color de la línea */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline; /* subrayado blanco al pasar el mouse */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .product-cards {
+        flex-direction: column;
+    }
+
+    .product-card {
+        margin: 0 0 1rem 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%; /* 1 columna */
+    }
+
+    .footer {
+        padding: 1rem 0; /* Ajustar el padding para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        padding: 1rem;
+    }
+
+    .explore-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 100%; /* 1 columna */
+    }
+}
+
+.button-details .button_text a {
+    margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+    footer .content .link-boxes {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 40%;
+        margin-top: 5px;
+    }
+}
+
+footer .button-details {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-details .bottom_text span,
+.button-details .bottom_text a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff; 
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.footer-text {
+    font-size: 12px;
+  }

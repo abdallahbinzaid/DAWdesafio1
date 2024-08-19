@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mojito In June', cursive;;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #f70505;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #8b8b8b;
+    border-radius: 5px;
+}
+
+header {
+    background-image: url('../img/sombrero.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Aumentado para más impacto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar el overlay */
+}
+h1 {
+    color: #FFFFFF;
+    font-size: 5em; /* Aumentado para más impacto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative; /* Para que esté sobre el overlay */
+    z-index: 1;
+}
+
+.platillos-mes {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.item-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+.order-btn {
+    background-color: #f0d03f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #f70d05;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+    }
+
+    .menu-item img {
+        max-width: 100%;
+    }
+
+    .item-info {
+        text-align: center;
+    }
+
+    .order-btn {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,282 @@
+/* se incluye para alinear al centro las imagenes */
+:root { 
+    --primary-color: #f2f2f2; 
+    --secondary-color: #333;
+    --card-width: 300px;
+    --card-height: 400px;
+  }
+  
+  body {
+    font-family: 'Mojito in June', cursive; /* Aplicar la fuente a todo  */
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+  background-color: #ec0404;
+  color: white;
+  padding: 10px 0;
+}
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease;
+}
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:nth-child(1) img {
+    object-position: center 30%;
+  }
+  
+  .card:nth-child(2) img {
+    object-position: center 70%;
+  }
+  
+  .card:nth-child(3) img {
+    object-position: center 50%;
+  }
+  
+  .card:nth-child(4) img {
+    object-position: center 20%;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-content {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --card-width: 100%;
+      --card-height: 300px;
+    }
+  }
+
+  .reviews {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-card {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-content {
+    padding: 10px;
+}
+
+.profile-content h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.profile-content p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Estilos para el footer */
+.footer {
+  background: linear-gradient(#C8102E, #C8102E); 
+  color: white;
+  padding: 1rem 0; /* Esta Ajustado para que no sea tan alto */
+  border-top: 1px solid #C8102E;
+  font-family: 'Mojito in June', cursive; 
+  font-size: 1.2rem;/* Se Aplico la fuente */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Separacion entre columnas */
+  flex-wrap: wrap; /* Pantalla pequeña */
+  margin-top: 1rem;
+}
+
+.footer-content div {
+  flex: 1; /* Columnas iguales */
+  min-width: 200px; /* el tamaño maximo y minimo */
+  margin: 0.5rem; /* Espacio entre columnas */
+  padding: 0rem;
+  position: relative;
+}
+
+.footer-content div:not(:last-child)::after {
+  content: ''; /* se agregan lineas de separacion*/
+  position: absolute; /* Posicion*/
+  top: 0; /* Alineacion superior */
+  right: 0; /* Alinecion derecha */
+  width: 4px; /* Ancho  */
+  height: 100%; /* Altura completa */
+  background-color: rgba(255, 255, 255, 0.3); /* se establece Color de la línea */
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline; /* se subraya o resalta al pasar el mouse */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .product-cards {
+      flex-direction: column;
+  }
+
+  .product-card {
+      margin: 0 0 1rem 0;
+  }
+
+  .card-container {
+      flex-direction: column;
+  }
+
+  .card {
+      flex: 1 1 100%; /* 1 columna */
+  }
+
+  .footer {
+      padding: 1rem 0; /* Ajuste de tamaños para pantallas */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+      font-size: 1.5rem;
+  }
+
+  .about-section {
+      padding: 1rem;
+  }
+
+  .explore-title {
+      font-size: 1.5rem;
+  }
+
+  .card {
+      flex: 1 1 100%; /* esta solo es 1 columna */
+  }
+}
+
+.button-details .button_text a {
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  footer .content .link-boxes {
+      flex-wrap: wrap;
+  }
+
+  .box {
+      width: 80%;
+      margin-top: 10px;
+  }
+
+  footer .content .link-boxes .input-box {
+      width: 40%;
+      margin-top: 5px;
+  }
+}
+
+footer .button-details {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-details .bottom_text span,
+.button-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff; 
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.flag {
+  width: 15px; /* para el tamaño de la bandera */
+  height: auto;
+  vertical-align: middle; /* Alineacion */
+  margin-right: 10px; /* y el Espacio entre la bandera y el texto */
+}
+
